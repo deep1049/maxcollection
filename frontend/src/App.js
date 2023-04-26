@@ -1,13 +1,15 @@
-import logo from "./logo.svg";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./Components/Home";
 import Navbar from "./Components/Navbar";
-import AllRoutes from "./Components/allRoutes";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <AllRoutes />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
